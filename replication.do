@@ -22,7 +22,7 @@ label variable subj_wellbeing "Subjective Wellbeing"
 label variable gparent_status "Grandparent Status"
 label variable gender "Gender"
 label variable n_gchildren "Number of Grandchildren"
-label variable ehg3_01b "Level of Education"
+label variable education "Level of Education"
 label variable agec "Age"
 label variable income "Level of Income"
 
@@ -34,7 +34,7 @@ asdoc tabulate  income gparent_status, row percent nofreq append
 
 asdoc tabstat subj_wellbeing n_gchildren agec, stat(mean sd min max) by(gparent_status) nototal long col(stat) ///
     title(Summary Stats of Variables by Grandparent Status) ///
-    append
+    append label
 
 
 //*regression models* //
